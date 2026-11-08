@@ -214,3 +214,12 @@ def test_exchange_own_feed_and_routine_news_are_not_exchange_trouble(tmp_path):
     dec.on_items("CoinDesk", [_item("CoinDesk", "Binance hit with SEC lawsuit", 0.6)])
     a = dec.on_items("Decrypt", [_item("Decrypt", "Binance faces lawsuit from SEC", 0.4)])
     assert [x.kind for x in a] == ["send"] and a[0].text.startswith(f"{ORANGE} BNB (эмитент Binance)")
+
+
+def test_xml_with_dtd_or_other_encoding_is_refused():
+    for raw in (b'<?xml version="1.0"?><!DOCTYPE rss SYSTEM "http://x/evil.dtd"><rss/>',
+                '<?xml version="1.0" encoding="UTF-16"?><!ENTITY a "x"><rss/>'.encode("utf-16"),
+                b'<rss><title>caf\xe9</title></rss>',              # не UTF-8 (latin-1)
+                '<?xml version="1.0" encoding="UTF-16"?><!DOCTYPE r [<!ENTITY a "x">]><r>&a;</r>'.encode("utf-16-le")):
+        with pytest.raises(ParseError):
+            parse(src("SEC"), raw)

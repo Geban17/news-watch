@@ -166,5 +166,19 @@
   "new": "\"limit\": 500}",
   "expect": 1,
   "why": "история MEXC — окна с обеими границами (иначе 5 дней вместо 30)"
+ },
+ {
+  "file": "news_watch/sources.py",
+  "old": "    if \"<!doctype\" in low or \"<!entity\" in low:",
+  "new": "    if \"<!entity\" in low:",
+  "expect": 1,
+  "why": "XML с DTD — отказ до разбора (XXE)"
+ },
+ {
+  "file": "news_watch/sources.py",
+  "old": "    if raw[:2] in (b\"\\xff\\xfe\", b\"\\xfe\\xff\") or b\"\\x00\" in raw:",
+  "new": "    if raw[:2] in (b\"\\xff\\xfe\", b\"\\xfe\\xff\"):",
+  "expect": 1,
+  "why": "XML в UTF-16 без метки — отказ (нули прячут <!ENTITY от поиска)"
  }
 ]

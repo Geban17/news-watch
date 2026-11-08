@@ -87,9 +87,17 @@ def _local(tag: str) -> str:
 
 def rss(raw: bytes) -> list[dict]:
     """RSS 2.0 и Atom: заголовок, ссылка, время."""
-    # Чужой XML: объявления сущностей не нужны ни одной ленте — отказ до разбора (XXE / «billion laughs»).
-    if b"<!ENTITY" in raw or b"<!entity" in raw.lower():
-        raise ParseError("xml: объявление сущностей")
+    # Чужой XML: DTD и сущности не нужны ни одной ленте — отказ до разбора (XXE / «billion laughs»). Проверка по
+    # тексту в UTF-8: другая кодировка (UTF-16 и т. п.) — отказ, иначе байтовый поиск можно обойти.
+    # UTF-16 / 32 без метки порядка байтов expat распознаёт сам, а нули между буквами прячут «<!ENTITY» от поиска.
+    if raw[:2] in (b"\xff\xfe", b"\xfe\xff") or b"\x00" in raw:
+        raise ParseError("xml: не UTF-8")
+    try:
+        low = raw.decode("utf-8").lower()
+    except UnicodeDecodeError as e:
+        raise ParseError("xml: не UTF-8") from e
+    if "<!doctype" in low or "<!entity" in low:
+        raise ParseError("xml: DTD / сущности")
     try:
         root = ET.fromstring(raw)
     except ET.ParseError as e:

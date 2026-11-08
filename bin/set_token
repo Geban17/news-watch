@@ -14,17 +14,26 @@ read -rsp "Токен от @BotFather (не отображается): " TOKEN; 
 [ -n "$TOKEN" ] || { echo "пусто — выход"; exit 1; }
 name=$(tg getMe | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["result"]["username"] if d.get("ok") else "")')
 [ -n "$name" ] || { echo "Telegram не принял токен — проверь и запусти снова"; exit 1; }
-echo "Бот: @$name. Напиши ему /start в Telegram — жду до 3 минут…"
-chat=""
+# Белый список — только чат, приславший одноразовый код (чужой /start боту не пройдёт). Старые сообщения пропускаются.
+CODE=$(openssl rand -hex 3)
+last=$(tg getUpdates "offset=-1" | python3 -c 'import json,sys; r=json.load(sys.stdin).get("result",[]); print(r[-1]["update_id"]+1 if r else 0)')
+echo "Бот: @$name. Отправь ему в Telegram:  /start $CODE   — жду до 3 минут…"
+found=""
 for _ in $(seq 1 18); do
-    chat=$(tg getUpdates "timeout=10" | python3 -c '
-import json, sys
-d = json.load(sys.stdin)
-ids = [u["message"]["chat"]["id"] for u in d.get("result", []) if u.get("message", {}).get("text", "").startswith("/start")]
-print(ids[-1] if ids else "")')
-    [ -n "$chat" ] && break
+    found=$(tg getUpdates "offset=$last&timeout=10" | CODE="$CODE" python3 -c '
+import json, os, sys
+for u in json.load(sys.stdin).get("result", []):
+    m = u.get("message") or {}
+    if m.get("chat", {}).get("type") == "private" and m.get("text", "").strip() == "/start " + os.environ["CODE"]:
+        f = m.get("from", {})
+        print(m["chat"]["id"], "@" + f.get("username", "") if f.get("username") else f.get("first_name", "?"))
+        break')
+    [ -n "$found" ] && break
 done
-[ -n "$chat" ] || { echo "/start не пришёл за 3 минуты — запусти снова"; exit 1; }
+[ -n "$found" ] || { echo "код не пришёл за 3 минуты — запусти снова"; exit 1; }
+chat=${found%% *}
+read -rp "Код прислал ${found#* }. Это ты? [y/N] " ok
+[ "$ok" = y ] || [ "$ok" = Y ] || { echo "отмена — ничего не записано"; exit 1; }
 printf 'NEWS_TG_TOKEN=%s\nNEWS_TG_CHAT_ID=%s\n' "$TOKEN" "$chat" | ssh -o BatchMode=yes "$SERVER" '
     umask 077; set -e
     test -d /opt/news-watch || { echo "на сервере нет /opt/news-watch — сначала scripts/deploy.sh"; exit 1; }
