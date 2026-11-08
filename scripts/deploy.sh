@@ -47,7 +47,7 @@ if [ \"\$(cat $REMOTE/.venv/.req_md5 2>/dev/null)\" != \"$REQ_MD5\" ]; then
 else
     echo '   библиотеки те же'
 fi
-chown -R root:root $REMOTE/news_watch $REMOTE/.venv $REMOTE/systemd
+chown -R root:root $REMOTE/news_watch $REMOTE/.venv $REMOTE/systemd $REMOTE/requirements.txt
 chown news:news $REMOTE/state && chmod 750 $REMOTE/state
 install -m 644 $REMOTE/systemd/news-watch.service /etc/systemd/system/news-watch.service
 systemctl daemon-reload
