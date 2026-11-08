@@ -1,0 +1,163 @@
+[
+ {
+  "file": "news_watch/alerts.py",
+  "old": "            if score >= 1.0:",
+  "new": "            if score > 1.0:",
+  "expect": 4,
+  "why": "🔴 при счёте ровно 1.0 (официальный источник × тяжёлые слова): приёмка FinCEN + ухудшение в паузе + та же новость завтра (одна официальная, счёт 1.0) + 🔴 о бирже для токена вне списка (2123)"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "score >= 0.4 and independent >= 2:",
+  "new": "score >= 0.4 and independent >= 1:",
+  "expect": 4,
+  "why": "🟠 — только из ≥ 2 независимых источников (+ короткий тикер: «(ONE)» из одного СМИ — ещё не 🟠) + беда биржи из 2 СМИ → 🟠 BNB (2123)"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "return self.now() - last[\"ts\"] >= C.COIN_COOLDOWN_S or",
+  "new": "return self.now() - last[\"ts\"] >= 0 or",
+  "expect": 2,
+  "why": "пауза 6 ч по монете (новости и ход)"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "or RANK[level] > RANK[last[\"level\"]]",
+  "new": "or RANK[level] >= RANK[last[\"level\"]]",
+  "expect": 2,
+  "why": "исключение из паузы — только ухудшение"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "        if source not in self.st.primed:",
+  "new": "        if False:",
+  "expect": 1,
+  "why": "первый обход источника — только «видено»"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "            if it.key in self.st.items:\n                continue",
+  "new": "            if it.key in self.st.items:\n                pass",
+  "expect": 1,
+  "why": "та же новость на следующие сутки не приходит снова"
+ },
+ {
+  "file": "news_watch/thresholds.py",
+  "old": "down = min(_quantile(r, C.TAIL_Q), -floor_dn)",
+  "new": "down = min(_quantile(r, 0.05), -floor_dn)",
+  "expect": 1,
+  "why": "край нормы — хвост 0.2 % монеты"
+ },
+ {
+  "file": "news_watch/thresholds.py",
+  "old": "if r <= C.RED_FACTOR * e.down or r < e.worst:",
+  "new": "if r <= e.down or r < e.worst:",
+  "expect": 1,
+  "why": "🔴 — в 1.5 раза дальше края"
+ },
+ {
+  "file": "news_watch/thresholds.py",
+  "old": "big_vol = vx is not None and vx >= C.VOLUME_X",
+  "new": "big_vol = True",
+  "expect": 1,
+  "why": "🟠 по ходу — только при объёме ×3"
+ },
+ {
+  "file": "news_watch/match.py",
+  "old": "    if issuer and any(",
+  "new": "    if False and any(",
+  "expect": 3,
+  "why": "монета → биржа-эмитент (MX ← MEXC) + 🔴 о бирже вне списка, 🟠 BNB из 2 СМИ (2123)"
+ },
+ {
+  "file": "news_watch/match.py",
+  "old": "(len(t) > SHORT_OR_WORD and _word(title, t, case=True))",
+  "new": "_word(title, t, case=True)",
+  "expect": 1,
+  "why": "короткие тикеры в СМИ — только (TICKER) / имя / эмитент"
+ },
+ {
+  "file": "news_watch/net.py",
+  "old": "                    self.muted_until[host] = self.now() + C.MUTE_ON_REFUSAL_S\n",
+  "new": "",
+  "expect": 1,
+  "why": "403/429/418 — домен молчит 30 мин"
+ },
+ {
+  "file": "news_watch/config.py",
+  "old": "DOMAIN_MIN_INTERVAL = {\"api.bybit.com\": 30.0}",
+  "new": "DOMAIN_MIN_INTERVAL = {\"api.bybit.com\": 1.0}",
+  "expect": 1,
+  "why": "Bybit — не чаще раза в 30 с (адрес общий с боем 2ч)"
+ },
+ {
+  "file": "news_watch/state.py",
+  "old": "self.items = {k: t for k, t in self.items.items() if t >= cut}",
+  "new": "self.items = {k: t for k, t in self.items.items() if t >= 0}",
+  "expect": 1,
+  "why": "«уже прислал» чистится через 7 суток"
+ },
+ {
+  "file": "news_watch/tg.py",
+  "old": "        if str(msg.get(\"chat\", {}).get(\"id\")) != chat_id:",
+  "new": "        if str(msg.get(\"chat\", {}).get(\"id\")) == \"never\":",
+  "expect": 1,
+  "why": "бот отвечает только Олегу"
+ },
+ {
+  "file": "news_watch/main.py",
+  "old": "if self.bad[name] >= C.BROKEN_AFTER and",
+  "new": "if self.bad[name] >= 1 and",
+  "expect": 1,
+  "why": "«перестал читаться» — после 2 обходов подряд"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "if len(ok) >= C.MARKET_WIDE_COINS:",
+  "new": "if len(ok) >= 99:",
+  "expect": 1,
+  "why": "≥ 3 монет разом — одно сообщение «рынок»"
+ },
+ {
+  "file": "news_watch/config.py",
+  "old": "    return minute % 15 <= 2",
+  "new": "    return minute % 15 <= 1",
+  "expect": 1,
+  "why": "минуты скана боя — без сети"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "(it.source == C.ISSUERS[t][0] or not _trouble(it.title))",
+  "new": "(not _trouble(it.title))",
+  "expect": 1,
+  "why": "о бирже — не из её собственной ленты (2123)"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "(it.source == C.ISSUERS[t][0] or not _trouble(it.title))",
+  "new": "(it.source == C.ISSUERS[t][0])",
+  "expect": 1,
+  "why": "о бирже — только её беда, не делистинг чужой монеты (2123)"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "        if red_only and level != RED and ev[\"msg\"] is None:\n            return None\n",
+  "new": "",
+  "expect": 1,
+  "why": "токен биржи вне списка — только 🔴 (2123)"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "        if ev[\"level\"] == RED and ev[\"why\"].startswith(\"эмитент\"):\n            lines.append(TOKEN_LINE.format(t=t))\n",
+  "new": "",
+  "expect": 1,
+  "why": "строка про токен биржи в 🔴 (2123)"
+ },
+ {
+  "file": "news_watch/forward.py",
+  "old": "            if r.get(\"token_0\") is None or r.get(\"btc_0\") is None:\n                out.append((r, \"0\"))\n",
+  "new": "",
+  "expect": 1,
+  "why": "цена в момент не получена — дописать позже, не ноль (2123)"
+ }
+]

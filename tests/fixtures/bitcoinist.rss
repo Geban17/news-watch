@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/" >
+
+<channel>
+	<title>Bitcoinist.com</title>
+	<atom:link href="https://bitcoinist.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://bitcoinist.com</link>
+	<description></description>
+	<lastBuildDate>Sun, 08 Nov 2026 14:26:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.4</generator>
+
+<image>
+	<url>https://bitcoinist.com/wp-content/uploads/2021/04/cropped-cropped-cropped-Icon.png?resize=64,64</url>
+	<title>Bitcoinist.com</title>
+	<link>https://bitcoinist.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Former FBI Agent Admits to $2.47 Million Crypto Theft</title>
+		<link>https://bitcoinist.com/former-fbi-agent-admits-to-2-47-million-crypto-theft/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sun, 08 Nov 2026 14:26:18 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Crypto theft]]></category>
+		<category><![CDATA[fbi counterintelligence]]></category>
+		<category><![CDATA[former fbi agent]]></category>
+		<category><![CDATA[stolen crypto]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[A former FBI agent has admitted to stealing nearly $2.5 million in cryptocurrency from digital wallets connected to federal investigations, exposing a serious breach of trust within the agency. Patrick Steven Yaroch, 37, pleaded guilty to wire fraud and money laundering after using his access to FBI systems to obtain cryptocurrency wallet credentials and transfer [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><strong>A former FBI agent has admitted to stealing nearly $2.5 million in cryptocurrency from digital wallets connected to federal investigations, exposing a serious breach of trust within the agency.</strong></p>
+<p>Patrick Steven Yaroch, 37, pleaded guilty to wire fraud and money laundering after using his access to <a href="https://bitcoinist.com/fbi-confirms-north-korea-was-behind-the-6-3b-binance-hack/">FBI systems</a> to obtain cryptocurrency wallet credentials and transfer funds for personal gain. According to prosecutors, the scheme involved approximately 100 unauthorized transactions linked to 35 separate investigations and generated $2,474,380.66.</p>
+<p>The case also revealed that the stolen assets were not limited to wallets associated with suspected criminals. Some belonged to victims of financial crimes, while others were connected to two unidentified adversarial nation-states. At least one wallet had been funded by the FBI as part of an investigative operation.</p>
+<h2 style="text-align: center;"><strong><b>How the Former FBI Agent Used His Position to Steal Crypto</b></strong></h2>
+<p>Yaroch began taking cryptocurrency no later than December 2024, exploiting information available through his work with the FBI. He initially served in the agency&#8217;s Boston Division before becoming a supervisory special agent in the Counterintelligence and Espionage Division at FBI headquarters in February 2025.</p>
+<p>His access allowed him to search investigative records for cryptocurrency wallet credentials. He then used the information to move funds into wallets under his control.</p>
+<p><a href="https://www.justice.gov/usao-edva/pr/former-fbi-agent-pleads-guilty-cryptocurrency-theft" rel="nofollow noopener" target="_blank">Court documents describe</a> a remarkably broad pattern of theft. Yaroch carried out roughly 100 fraudulent transfers from at least 79 wallets, with individual transactions ranging from just 81 cents to more than $580,000.</p>
+<p>After taking the funds, he moved portions through different cryptocurrencies and services in an effort to obscure their origins. One documented sequence involved transferring Bitcoin, converting some of it into <a href="https://bitcoinist.com/plex-server-exploit-chain-used-to-install-monero-mining-malware/">Monero</a> and Solana, and eventually moving assets through the Sui network before depositing funds into a Kraken account.</p>
+<p>The transactions also had consequences beyond the financial losses. Prosecutors said Yaroch&#8217;s conduct compromised investigations involving criminal organizations and foreign adversaries, potentially exposing sensitive investigative methods and intelligence-gathering operations.</p>
+<h2 style="text-align: center;"><strong><b>Stolen Cryptocurrency Helped Finance Plans for a New Life in Portugal</b></strong></h2>
+<p>Yaroch reportedly used part of the proceeds to address personal financial obligations, including credit card balances and vehicle payments.</p>
+<p>Court filings describe how he transferred approximately $93,082 into a TD Bank account between November 2025 and January 2026. The money was used to reduce debts, including around $30,176 in credit card payments and $20,000 toward a Lexus.</p>
+<p>However, his plans extended beyond paying off outstanding bills. Investigators discovered that Yaroch was considering leaving the United States and establishing a new life in Portugal, where he hoped to purchase a vineyard.</p>
+<p>In June, he reportedly asked ChatGPT for advice about relocating to a European Union country with approximately $1 million. His plans subsequently became more concrete: he gave Portuguese lawyers power of attorney to help register him with the country&#8217;s tax authorities and arranged travel connected to the potential move. The investigation also uncovered evidence that he had been preparing for this transition while still employed by the FBI. His plans ultimately fell apart after he disclosed his conduct to Justice Department personnel in July 2026.</p>
+<h2 style="text-align: center;"><strong><b>Guilty Plea Brings Millions in Restitution and Forfeiture</b></strong></h2>
+<p>Yaroch&#8217;s guilty plea covers one count of wire fraud and one count of money laundering. Each offense carries a potential maximum sentence of 20 years in prison, although the final punishment will be determined by the court. His sentencing is scheduled for March 4, 2027.</p>
+<p>Under the plea agreement, Yaroch has agreed to pay at least $2.4 million in restitution and forfeit assets connected to the scheme. These include approximately 1.38 million SUI tokens, 17,990 USDC, and funds held in several bank and cryptocurrency exchange accounts. He also agreed to surrender any future proceeds from books, films, interviews, or other projects discussing his FBI career or the criminal case.</p>
+<h2 style="text-align: center;"><strong><b>Another Case Raises Questions About the Security of Seized Crypto</b></strong></h2>
+<p>The Yaroch case adds to wider concerns surrounding the handling of cryptocurrency connected to criminal investigations and government seizures.</p>
+<p>Federal agencies regularly encounter digital assets while investigating cybercrime, fraud, ransomware operations, and illicit financial networks. Access to wallet credentials can therefore carry significant responsibility, particularly when those assets are tied to ongoing investigations or intelligence operations.</p>
+<p>The case also follows a separate investigation <a href="https://bitcoinist.com/kraken-restricts-accounts-after-suspected-133m-crypto-theft/">involving the alleged theft</a> of more than $46 million in cryptocurrency from wallets associated with the US Marshals Service. That investigation involved John Daghita, who was arrested in Saint Martin and is facing federal charges.</p>
+<p><strong>Do you think government agencies need stronger safeguards for cryptocurrency seized during investigations? And could cases like this affect public confidence in the security of government-managed digital assets?</strong></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/FBI-Handcuffs-and-Bitcoin-Investigation-640x360.webp" width="640" height="360" />	</item>
+		<item>
+		<title>Trump Administration Inches Closer to Opening 401(k)s to Crypto</title>
+		<link>https://bitcoinist.com/trump-administration-inches-closer-to-opening-401ks-to-crypto/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sun, 08 Nov 2026 14:18:59 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[401k]]></category>
+		<category><![CDATA[crypto retirement]]></category>
+		<category><![CDATA[retirement fond]]></category>
+		<category><![CDATA[Trump administration]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[The Trump administration has moved another step closer to opening America&#8217;s $10 trillion-plus retirement market to cryptocurrency. The US Department of Labor (DOL) has submitted a proposed regulatory framework to the White House for review, potentially bringing Bitcoin and other alternative investments closer to becoming options within employer-sponsored 401(k) retirement plans. The filing, submitted on [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><strong>The Trump administration has moved another step closer to opening America&#8217;s $10 trillion-plus retirement market to cryptocurrency. The US Department of Labor (DOL) has submitted a proposed regulatory framework to the White House for review, potentially bringing Bitcoin and other alternative investments closer to becoming options within employer-sponsored 401(k) retirement plans.</strong></p>
+<p><a href="https://www.congress.gov/crs-product/IF12153" rel="nofollow noopener" target="_blank">The filing, submitted on November 5</a>, marks a significant development in President Donald Trump&#8217;s effort to expand access to digital assets through traditional investment accounts. However, the proposal still needs to clear the White House review process, and its arrival does not mean Americans can immediately add crypto to their retirement portfolios.</p>
+<h2 style="text-align: center;"><strong><b>Labor Department Sends Crypto Retirement Rule to White House</b></strong></h2>
+<p>The Department of Labor submitted its proposal to the Office of Information and Regulatory Affairs (OIRA), which operates under the White House Office of Management and Budget. OIRA reviews federal regulations before they are finalized and published.</p>
+<p>The filing follows<a href="https://bitcoinist.com/trump-crypto-tokens-crash-as-democrats-take-control-of-congress/"> Trump&#8217;s August 2025 executive order</a> directing federal agencies to make it easier for retirement plans to consider alternative investments, including cryptocurrencies, private equity and real estate.</p>
+
+
+
+
+
+
+
+
+
+<blockquote>
+Crypto in your 401(k) is getting closer to reality. The Department of Labor has sent a proposed rule to the White House for review that would pave the way for retirement plans to include alternative assets, including crypto and private equity. The move follows Trump’s executive order to expand investment options for retirement savers.
+</blockquote>
+
+
+
+
+
+
+
+
+<blockquote><p>The administration&#8217;s latest move builds on an earlier regulatory proposal released in March 2026. That framework outlined how retirement plan managers could assess alternative assets when deciding whether to include them among their investment options. &#8211; <a href="https://x.com/fintechfrank/status/2119186957188387032" rel="nofollow">Frank Chaparro on X.</a></p></blockquote>
+<p>In its latest filing, the Labor Department emphasized the need for fiduciaries to balance potentially higher investment expenses against the possibility of stronger long-term returns and broader portfolio diversification. The agency also indicated that it was still evaluating the costs associated with the proposed framework, suggesting that some regulatory considerations remain unresolved.</p>
+<h2 style="text-align: center;"><strong><b>Six Key Factors Would Guide Crypto Investment Decisions</b></strong></h2>
+<p>The proposed framework does not instruct employers to add Bitcoin or other cryptocurrencies to their retirement plans. Instead, it establishes a process that fiduciaries could follow when evaluating alternative investments.</p>
+<p>The March proposal identified six areas for consideration: performance, fees, liquidity, valuation, performance benchmarks and investment complexity. These factors are particularly important for digital assets because cryptocurrency markets can experience sharp price movements, while certain investment products may carry higher management fees or involve complicated structures.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter wp-image-706834 size-full" src="https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-scaled.jpg" alt="trump administration 401k investment
+" width="2560" height="1707" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-scaled.jpg 2560w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-630x420.jpg 630w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-980x653.jpg 980w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-768x512.jpg 768w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-1536x1024.jpg 1536w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-2048x1365.jpg 2048w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-750x500.jpg 750w, https://bitcoinist.com/wp-content/uploads/2026/11/piggybank-sK-ziQvKGsk-unsplash-1-1140x760.jpg 1140w" sizes="(max-width: 2560px) 100vw, 2560px" /></p>
+<p>The proposal also addresses how managers should evaluate assets that do not have readily available market prices. This is especially relevant to private equity and other investments that are not traded as frequently as publicly listed stocks.</p>
+<h2 style="text-align: center;"><strong><b>$216 Billion Crypto Allocation Scenario Highlights Market Potential</b></strong></h2>
+<p>The potential impact extends well beyond the regulatory changes themselves. American retirement accounts represent an enormous pool of capital that could eventually provide additional exposure to digital assets.</p>
+<p>According to the Investment Company Institute, US 401(k) plans held approximately $10.8 trillion in assets at the end of June 2026. Crypto-focused company Sweep highlighted the scale of that market in a November 6 post on X, suggesting that a 2% allocation of those assets to cryptocurrency could translate into approximately $216 billion in potential inflows.</p>
+<p>Even a relatively small allocation could create substantial demand for digital assets if employers and retirement plan managers decide to offer suitable crypto investment products. However, the calculation assumes that 2% of the entire retirement asset pool moves into cryptocurrency. There is currently no indication that employers, fiduciaries or individual savers will adopt such an allocation.</p>
+<h2 style="text-align: center;"><strong><b>Political Opposition Raises Concerns Over Retirement Risk</b></strong></h2>
+<p>Despite the administration&#8217;s efforts, the proposal has attracted criticism from lawmakers concerned about exposing retirement savings to volatile and potentially complex investments.</p>
+<p>Senators Bernie Sanders and Elizabeth Warren have previously urged the Labor Department to abandon the initiative, arguing that including assets such as cryptocurrency in retirement plans could expose ordinary investors to unnecessary financial risks.</p>
+<p>Their concerns center on crypto&#8217;s price volatility, investment complexity and the possibility that inexperienced savers could struggle to assess the risks associated with digital assets.</p>
+<p>The regulatory debate also reflects a broader shift in the Labor Department&#8217;s approach. During the Biden administration, the department issued guidance warning retirement plan managers to exercise extreme care before considering cryptocurrency investments. The Trump administration later withdrew that guidance, returning to a more neutral position on crypto exposure in retirement accounts.</p>
+<h2><strong><b>What Happens Next for Crypto in 401(k) Plans?</b></strong></h2>
+<p>The White House review must be completed before the Labor Department can move toward publication of the final rule. Even then, the framework would not automatically make Bitcoin or other cryptocurrencies available in every workplace retirement account.</p>
+<p>For the cryptocurrency industry, the development represents a potential gateway into one of the largest pools of long-term investment capital in the United States. Yet the ultimate impact will depend on how many retirement providers are comfortable offering digital asset exposure and how much risk investors are willing to accept.</p>
+<p>If the framework moves forward, crypto could gain a more established place in traditional retirement investing. For now, however, the market is waiting for the White House to complete its review and reveal the final regulatory approach.</p>
+<p><strong>Could access to 401(k) retirement accounts become one of the biggest catalysts for Bitcoin adoption in the US?</strong></p>
+<p><strong>Will American retirement savers embrace crypto investments, or will concerns over volatility keep employers cautious?</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/Bitcoin-and-401k-in-Washington-640x360.webp" width="640" height="360" />	</item>
+		<item>
+		<title>Solana Price Set To Catch Up After Record October, RSI Signals Reversal</title>
+		<link>https://bitcoinist.com/solana-price-catch-up-record-october/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sun, 08 Nov 2026 09:33:45 +0000</pubDate>
+				<category><![CDATA[Altcoin News]]></category>
+		<category><![CDATA[Crypto News]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[sol coin]]></category>
+		<category><![CDATA[SOL news]]></category>
+		<category><![CDATA[SOL price]]></category>
+		<category><![CDATA[Solana price]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[Solana just wrapped up the biggest month in its history. A brand-new consensus engine, blocks twice as fast, record tokenized assets and a wave of Wall Street and payments partners all landed in October. The price has not caught up yet. SOL is trading around $89.25 after this week&#8217;s market-wide sell-off dragged it below $90. [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p data-lfile-container="540d5a71-449e-4131-b316-6e85ae06b496" data-pm-slice="1 1 []"><strong>Solana just wrapped up the biggest month in its history. A brand-new consensus engine, blocks twice as fast, record tokenized assets and a wave of Wall Street and payments partners all landed in October.</strong></p>
+<p>The price has not caught up yet. SOL is trading around $89.25 after this week&#8217;s market-wide sell-off dragged it below $90. But with the network&#8217;s fundamentals at all-time highs, that gap may not last long.</p>
+<p>Historically, upgrades this big tend to get priced in once the broader market stabilizes.</p>
+<p>And the chart is already hinting that the turn could be close.</p>
+<h2>Solana&#8217;s October In Numbers</h2>
+<p>The Solana Foundation summed up October as &#8220;a month of records across network speed, tokenized assets, payments, and institutional access&#8221; in a <a href="https://x.com/solana" target="_blank" rel="noopener noreferrer nofollow">recap thread on X</a>.</p>
+<img decoding="async" class="wp-image-706824 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.57.21-457x660.webp" alt="solana price outlook SOL" width="457" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.57.21-457x660.webp 457w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.57.21-291x420.webp 291w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.57.21-768x1110.webp 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.57.21-750x1084.webp 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.57.21.webp 948w" sizes="(max-width: 457px) 100vw, 457px" />
+<p>Here is what changed:</p>
+<ul>
+<li><strong>Faster blocks:</strong> On Oct. 9, the final stage of SIMD-0525 cut Solana&#8217;s target slot time from 400 milliseconds to 200 milliseconds.</li>
+<li><strong>New consensus engine:</strong> On Oct. 21, Alpenglow replaced TowerBFT on mainnet, targeting finality of around 150 milliseconds, down from roughly 12.8 seconds. The switch happened on a live network without a restart.</li>
+<li><strong>Record RWAs:</strong> Real-world assets tokenized on Solana hit a new high of $5 billion.</li>
+<li><strong>Trading and stablecoins:</strong> The chain processed about $60 billion in DEX volume, and 14 million addresses now hold stablecoins.</li>
+<li><strong>Wall Street access:</strong> J.P. Morgan Asset Management brought tokenized money market funds to Solana through Morgan Money, while Securitize and Ondo expanded stock and portfolio products.</li>
+<li><strong>Payments:</strong> Samsung Wallet, Fiserv and Western Union added Solana integrations, though some are still pilots or limited to certain regions.</li>
+</ul>
+<p>Alpenglow also changes how validators vote. Votes are no longer posted as on-chain transactions, which frees up block space. Since votes made up about 63% of all Solana transactions, transaction-count dashboards will show a sharp drop that does not reflect weaker usage.</p>
+<h2>Why The Solana Price Hasn&#8217;t Caught Up Yet</h2>
+<p>The timing of the upgrades was the main issue. They landed just as macro pressure hit every risk asset at once, so the market has not had a chance to price in what Solana delivered.</p>
+<p>The midterm election results and an AI-driven tech sell-off have since hit risk assets hard. <a href="https://bitcoinist.com/bitcoin-holds-critical-76k-level-as-ai-sell-off-triggers-market-wide-panic/" target="_blank" rel="noopener noreferrer nofollow ">Bitcoin fell back to its critical $76,000 level</a> on Thursday, and altcoins followed.</p>
+<p>Institutional demand has also dried up. <a href="https://www.tradingview.com/news/coinpedia:50d096cbf094b:0-solana-price-struggles-below-90-is-a-bullish-reversal-taking-shape/" target="_blank" rel="noopener noreferrer nofollow">According to Coinpedia</a>, spot Solana ETFs have recorded no net inflows for 12 straight trading sessions. On Nov. 6 alone, Solana products saw about $25 million in outflows, alongside $412 million from Bitcoin ETFs and $93 million from Ethereum funds.</p>
+<p>That is a sharp reversal from earlier this year, when <a href="https://bitcoinist.com/solana-etf-inflows-top-116b-as-sol-trades-near-86/" target="_blank" rel="noopener noreferrer nofollow ">Solana ETF inflows topped $1.16 billion</a>.</p>
+<h2>RSI Divergence Hints At A Bullish Reversal</h2>
+<p>The chart is not all bad news, though. While the Solana price keeps printing lower lows, the Relative Strength Index (RSI) has started to climb.</p>
+<p>That is a classic bullish divergence. It suggests selling pressure is weakening even as price drifts lower, a pattern that often appears near the end of a correction.</p>
+<p>According to <a href="https://x.com/0xSweep/status/2109951077978349603" rel="nofollow">crypto trader Sweep</a>, SOL falling while RSI rises is a sign of seller exhaustion, the kind of setup that has preceded sharp rallies before.</p>
+<img decoding="async" class="wp-image-706825 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-10.05.02-596x660.webp" alt="solana bullish SOL news SOL price" width="596" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-10.05.02-596x660.webp 596w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-10.05.02-379x420.webp 379w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-10.05.02-768x850.webp 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-10.05.02-750x831.webp 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-10.05.02.webp 950w" sizes="(max-width: 596px) 100vw, 596px" />
+<p>Bulls will want to see SOL reclaim its short-term moving averages to confirm the signal. If that happens alongside a calmer macro backdrop, October&#8217;s record month gives the rally plenty of fundamental fuel.</p>
+<h2>Solana Price Levels To Watch</h2>
+<p>The first test for bulls is reclaiming $90. SOL lost that level this week, and turning it back into support would be the first sign the divergence is playing out.</p>
+<p>Above that, the $95 area is the next hurdle, followed by the psychological $100 mark. A clean break above $100 would end the pattern of lower highs and put October&#8217;s highs back in focus.</p>
+<p>On the downside, the $86 zone is the nearest support. A breakdown there would open the door toward the $80 level, where SOL found buyers during <a href="https://bitcoinist.com/solana-slides-below-80-but-network-activity-keeps-the-story-alive/" target="_blank" rel="noopener noreferrer nofollow ">its earlier slide below $80</a>.</p>
+<p>The catalyst to watch is ETF flows. A return of steady inflows would give the Solana price the institutional bid it has been missing, and would let the market finally start pricing in October&#8217;s upgrades. For more updates, follow the latest <a href="https://bitcoinist.com/category/altcoin-news/" target="_blank" rel="noopener noreferrer nofollow ">altcoin news</a>.</p>
+<p>What do you think happens next?</p>
+<p>Is Solana&#8217;s record October about to show up in the price, and could SOL be back above $100 before the end of the year?</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/Solana-Coin-and-Digital-Payments-630x420.webp" width="630" height="420" />	</item>
+		<item>
+		<title>Bitcoin Technical Analysis: Bullish Checkmate Setup Near $76K</title>
+		<link>https://bitcoinist.com/bitcoin-technical-analysis-bullish-checkmate-setup-near-76k/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sun, 08 Nov 2026 09:31:47 +0000</pubDate>
+				<category><![CDATA[Bitcoin]]></category>
+		<category><![CDATA[Bitcoin News]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[bitcoin chart]]></category>
+		<category><![CDATA[Bitcoin Charts]]></category>
+		<category><![CDATA[BTC Technical Analysis]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[Bitcoin is going quiet after a violent week, and chart watchers think that calm could be the setup for the next move higher. Our Bitcoin technical analysis shows that currently, BTC is trading at $75,865, down 0.41% on the day, inside a tight range between $75,645 and $75,979. That is a 0.4% daily range after [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p data-lfile-container="04f862c5-4aba-4c99-b273-18e29e4b1d72" data-pm-slice="1 1 []"><strong>Bitcoin is going quiet after a violent week, and chart watchers think that calm could be the setup for the next move higher. </strong></p>
+<p data-lfile-container="04f862c5-4aba-4c99-b273-18e29e4b1d72" data-pm-slice="1 1 []">Our Bitcoin technical analysis shows that currently, BTC is trading at $75,865, down 0.41% on the day, inside a tight range between $75,645 and $75,979. That is a 0.4% daily range after a week in which <a href="https://bitcoinist.com/bitcoin-holds-critical-76k-level-as-ai-sell-off-triggers-market-wide-panic/" target="_blank" rel="noopener noreferrer nofollow ">Bitcoin was knocked back to the critical $76,000 level</a> by the AI-driven sell-off.</p>
+<p>The price is still down 3.2% over the past week and 7.2% over the past month. But two well-followed analysts now see bullish signals building on both the short- and long-term charts.</p>
+<p>Below, we are showing a detailed BTC technical analysis and the current sentiment by traders on X..</p>
+<h2>Analyst Spots A 4H Bullish Checkmate Setup</h2>
+<p>Crypto trader Cheds Trading <a href="https://x.com/BigCheds/status/2119063837819150392" rel="nofollow">took a bullish note and shared it on X</a>, showing Bitcoin&#8217;s 4-hour chart and how it is now flashing a potential bullish checkmate setup.</p>
+<img loading="lazy" decoding="async" class="wp-image-706815 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24-743x660.webp" alt="bitcoin bullish forming" width="743" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24-743x660.webp 743w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24-473x420.webp 473w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24-768x682.webp 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24-750x666.webp 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24-1140x1012.webp 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.28.24.webp 1196w" sizes="auto, (max-width: 743px) 100vw, 743px" />
+<p>The chart shared by the analyst shows a large red capitulation candle that wiped out the early-November rally, followed by a series of small-bodied candles grinding sideways near the lower Bollinger Band. Selling momentum has faded, volume has dropped off, and price has stopped making meaningful new lows.</p>
+<p>That kind of compression after a sharp flush often signals that sellers are running out of steam. If buyers step in, the tight range can resolve with a sharp move to the upside.</p>
+<p>The short-term indicators support that view. On the hourly chart, BTC&#8217;s technical summary reads Buy, while technical indicators flash Strong Buy with seven buy signals against just one sell.</p>
+<h2>Bitcoin Reclaims A Nine-Year Trendline</h2>
+<p>The bigger picture is turning more constructive too. Part-Time Trader <a href="https://x.com/PartTimeCharts/status/2119109120989262023?referrer=grok-com" rel="nofollow">posted on X</a> saying that Bitcoin has reclaimed a nine-year trendline he has been tracking for months, calling it one of the reasons he has now flipped bullish on crypto.</p>
+<img loading="lazy" decoding="async" class="wp-image-706814 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-664x660.webp" alt="bitcoin technical btc analysis" width="664" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-664x660.webp 664w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-423x420.webp 423w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-768x763.webp 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-64x64.webp 64w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-75x75.webp 75w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-750x745.webp 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53-1140x1132.webp 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.29.53.webp 1186w" sizes="auto, (max-width: 664px) 100vw, 664px" />
+<p>That trendline connects Bitcoin&#8217;s major cycle lows, including the 2018-2019 bottom, the March 2020 crash and the late-2022 bear market low. Every time BTC has bounced off it, a major rally has followed.</p>
+<p>The analyst&#8217;s chart projects a fresh leg higher from here, with Bitcoin pushing toward new all-time highs. However, he was clear that he does not see it lasting forever. He expects the rally to ultimately disappoint, with altcoins outperforming and Bitcoin eventually collapsing when the global debt bubble pops.</p>
+<p>For now, though, holding above this long-term support line keeps the bullish structure intact.</p>
+<h2>Bitcoin Technical Analysis Across Timeframes</h2>
+<p>The signals change depending on how far you zoom out. Short-term charts have turned bullish, while the daily chart still reflects last week&#8217;s damage.</p>
+<table>
+
+
+
+<tbody>
+<tr>
+<th colspan="1" rowspan="1">Timeframe</th>
+<th colspan="1" rowspan="1">Signal</th>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">30 minutes</td>
+<td colspan="1" rowspan="1">Strong Buy</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">Hourly</td>
+<td colspan="1" rowspan="1">Buy</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">5 hours</td>
+<td colspan="1" rowspan="1">Strong Sell</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">Daily</td>
+<td colspan="1" rowspan="1">Strong Sell</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">Weekly</td>
+<td colspan="1" rowspan="1">Neutral</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">Monthly</td>
+<td colspan="1" rowspan="1">Neutral</td>
+</tr>
+</tbody>
+</table>
+<p>On the hourly chart, the RSI sits at 49.4, right in neutral territory, leaving plenty of room to run in either direction. The CCI at 109 and the Williams %R at -28 both flash buy signals.</p>
+<p>The Stochastic RSI has climbed to 80.4, which is overbought, and the MACD is still slightly negative at -32. The ADX at 21 confirms there is no strong trend in place yet, while the ATR at 153 points to low volatility. Compressed volatility like this usually comes before a big move.</p>
+<h2>Bitcoin Price Levels To Watch</h2>
+<p>BTC is trading right on top of its short-term moving averages. The hourly 5, 10 and 20-period MAs all sit between $75,811 and $75,864, providing immediate support.</p>
+<p>The first hurdle overhead is the hourly 50-period EMA near $76,108. Above that, the 100 and 200-period MAs between $76,647 and $77,410 form the key resistance zone. A clean break above $77,400 would confirm Cheds&#8217; checkmate setup and open the door toward $78,500 and the $80,000 to $82,000 range.</p>
+<p>On the downside, the classic pivot supports sit at $75,859, $75,756 and $75,696. A break below $75,000 would expose the $74,000 liquidity zone and put the nine-year trendline back in focus.</p>
+<p>Bitcoin is still down 25.8% over the past year, and its 52-week range spans from $57,833 to $107,461. But it is also up 16.8% over the past three months, a reminder that the medium-term trend remains intact.</p>
+<p>For more market updates, follow the latest <a href="https://bitcoinist.com/category/bitcoin/" target="_blank" rel="noopener noreferrer nofollow ">Bitcoin price analysis</a>.</p>
+<p>What do you think happens next?</p>
+<p>Will Bitcoin&#8217;s bullish checkmate setup trigger a breakout above $77,400, or does BTC need to retest $74,000 first?</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/Bullish-Bitcoin-Checkmate-in-Daylight-630x420.webp" width="630" height="420" />	</item>
+		<item>
+		<title>Ethereum Price Repeats 2025 Fractal As Whales Buy The Dip</title>
+		<link>https://bitcoinist.com/ethereum-price-repeats-2025-fractal-as-whales-buy-the-dip/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sun, 08 Nov 2026 08:26:15 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[News teaser]]></category>
+		<category><![CDATA[ETH news]]></category>
+		<category><![CDATA[eth sentiment]]></category>
+		<category><![CDATA[Ethereum]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[The Ethereum price may have already finished its correction. After a rough week for crypto, ETH is holding a key support zone while whales quietly scoop up coins and sentiment starts to turn. ETH is trading around $2,230, roughly flat over the past week despite the broader market sell-off. That is a solid showing after [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p data-lfile-container="14f945bb-4cb8-4da4-a3cd-e60e23ef630d" data-pm-slice="1 1 []"><strong>The Ethereum price may have already finished its correction. After a rough week for crypto, ETH is holding a key support zone while whales quietly scoop up coins and sentiment starts to turn.</strong></p>
+<p>ETH is trading around $2,230, roughly flat over the past week despite the broader market sell-off. That is a solid showing after Thursday&#8217;s AI-driven panic, when <a href="https://bitcoinist.com/bitcoin-holds-critical-76k-level-as-ai-sell-off-triggers-market-wide-panic/" target="_blank" rel="noopener noreferrer nofollow ">Ethereum dropped more than 7% in a single day</a>.</p>
+<p>Popular crypto analyst Crypto Capo believes the worst is behind it. In a recent <a href="https://x.com/CryptoCapo_/status/2117643971413303482" target="_blank" rel="noopener noreferrer nofollow">ETH update on X</a>, Capo said the retracement has now played out. According to the analyst, the pullback started at the same resistance level and ended at the same support level as a similar move in 2025, a fractal that he expects to resolve in a bullish continuation along with the rest of the market.</p>
+<img loading="lazy" decoding="async" class="wp-image-706805 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26-626x660.png" alt="cryptocapo eth prediction twitter" width="626" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26-626x660.png 626w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26-399x420.png 399w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26-768x809.png 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26-750x790.png 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26-1140x1201.png 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.14.26.png 1190w" sizes="auto, (max-width: 626px) 100vw, 626px" />
+<p>The on-chain data is starting to back that view up, and the biggest players are already positioning for it.</p>
+<h2>Whales Are Buying The Ethereum Dip</h2>
+<p>Large holders have been accumulating ETH aggressively around current levels. One whale using two wallets withdrew 18,550 ETH, worth more than $42 million, in just five days. Another picked up roughly 13,080 ETH, worth about $30 million, from Binance over the same period. A previously dormant wallet also swapped $19.7 million in USDT for ETH.</p>
+<p>Institutional buyers are joining in too. Bitmine added another 5,000 ETH, worth about $11.22 million, during the dip and now holds 4.96% of Ethereum&#8217;s total supply.</p>
+<p>The timing is no accident. The $2,200 level is also the realized price for accumulation addresses, the average cost basis of wallets that have only been buying. Whales appear to be defending that floor.</p>
+<h2>Ethereum Sentiment Is Recovering Fast</h2>
+<p>The mood around ETH is also improving. The <a href="https://cfgi.io/ethereum-fear-greed-index/" target="_blank" rel="noopener noreferrer nofollow">Ethereum Fear &amp; Greed Index</a> now reads 45, which sits in Neutral territory.</p>
+<p>That is a sharp turnaround. A week ago the index stood at 35, and a month ago it was at 27, both firmly in Fear. Today&#8217;s reading is also stronger than Bitcoin&#8217;s score of 39, a sign that sentiment toward ETH is recovering faster than toward the market leader.</p>
+<img loading="lazy" decoding="async" class="wp-image-706808 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-980x359.webp" alt="Ethereum price colored by CFGI fear and greed sentiment over the selected daily range." width="980" height="359" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-980x359.webp 980w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-640x234.webp 640w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-768x281.webp 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-1536x562.webp 1536w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-750x274.webp 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44-1140x417.webp 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-08-at-09.20.44.webp 1946w" sizes="auto, (max-width: 980px) 100vw, 980px" />
+<p>Whale activity scores as Neutral at 59 on the index, while the social component has jumped into Extreme Greed. Price, volume and technical readings remain in Fear, which leaves room for those metrics to catch up if the Ethereum price keeps climbing.</p>
+<h2>Last Time Retail Gave Up, ETH Bottomed</h2>
+<p>History offers another reason for optimism. In June 2026, Santiment data showed the crowd had essentially written off Ethereum. Social sentiment collapsed into extreme fear, and the smallest wallets dumped their holdings.</p>
+<p>Wallets holding less than 0.01 ETH cut their balances by 1,791 ETH in just two days, while wallets with under 0.1 ETH sold 0.90% of their supply in a month. ETH was trading near $1,630 at the time.</p>
+<p>That capitulation marked the turning point. ETH set its 2026 low near $1,567 on June 6 and has since climbed more than 40% to current levels. It is a textbook example of retail selling into the bottom while larger investors accumulate, the same pattern now playing out around $2,200.</p>
+<p>Other indicators are flashing similar signals, including <a href="https://bitcoinist.com/ethereum-indicator-never-missed-a-bottom-at-700/" target="_blank" rel="noopener noreferrer nofollow ">an Ethereum metric that has never missed a bottom</a>.</p>
+<h2>Ethereum Price Levels To Watch</h2>
+<p>The key zone for bulls is $2,200 to $2,220. As long as ETH holds above it, the next upside target sits at $2,425. A break above that level would put the Ethereum price on track to confirm Capo&#8217;s bullish continuation.</p>
+<p>On the downside, a loss of $2,200 would expose $2,000 and then $1,900 as the next demand zones.</p>
+<p>There are still risks to watch. Despite heavy spot buying, the whale-versus-retail position delta remains slightly negative, meaning big traders still lean short overall. Market maker Wintermute recently opened a $73 million short position on Hyperliquid, with $26.4 million in ETH.</p>
+<p>But some whales are already betting the other way. One trader who went long at $2,221 after the latest drop is sitting on a floating profit of around $252,000 and has won his last 10 trades in a row.</p>
+<p>Institutional demand will also matter. Spot Ethereum ETFs <a href="https://bitcoinist.com/ethereum-etfs-extend-inflow-streak-with-another-210m-session/" target="_blank" rel="noopener noreferrer nofollow ">posted strong inflow streaks in September</a>, and a return of those flows could give ETH the push it needs. For more updates, follow the latest <a href="https://bitcoinist.com/category/ethereum/" target="_blank" rel="noopener noreferrer nofollow ">Ethereum news</a>.</p>
+<p>What do you think happens next?</p>
+<p>Is the Ethereum retracement over and a bullish continuation about to begin, or does ETH need one more dip toward $2,000 before the next leg up?</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/Smoked-Glass-Ethereum-Whale-Accumulation-630x420.webp" width="630" height="420" />	</item>
+		<item>
+		<title>AI IPO Dilution Could Fuel Crypto&#8217;s Next Rally, Analyst Warns</title>
+		<link>https://bitcoinist.com/ai-ipo-dilution-could-fuel-cryptos-next-rally-analyst-warns/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sat, 07 Nov 2026 14:25:21 +0000</pubDate>
+				<category><![CDATA[Crypto News]]></category>
+		<category><![CDATA[News]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[AI IPO dilution is shaping up to be the next big test for markets, and one well-known crypto analyst warns it could shake risk assets before setting up crypto&#8217;s next rally. BitMEX co-founder Arthur Hayes argues that public listings of SpaceX, Anthropic and eventually OpenAI could leave investors who buy at the offering price facing [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p data-lfile-container="c15287cb-f9bd-400b-a54b-c59e9046d644" data-pm-slice="1 1 []">AI IPO dilution is shaping up to be the next big test for markets, and one well-known crypto analyst warns it could shake risk assets before setting up crypto&#8217;s next rally.</p>
+<p>BitMEX co-founder Arthur Hayes argues that public listings of SpaceX, Anthropic and eventually OpenAI could leave investors who buy at the offering price facing steep losses. In a <a href="https://x.com/CryptoHayes/status/2118194461528449450" rel="nofollow">post on X</a> shown below, he previewed his latest essay, “D is for Dilution,” which argues that as insider shares unlock, a wave of new supply could flood the market and drive prices lower.</p>
+<p>The figures are striking. Hayes estimates that roughly 8.6 billion SpaceX shares could become tradable by June 2027, about half of the current share count. For Anthropic, he calculates that early public investors could face up to 83% dilution over the same period as lockups expire. OpenAI has not filed for an IPO yet, but Hayes expects a similar dynamic if it does.</p>
+<img loading="lazy" decoding="async" class="wp-image-706791 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34-567x660.webp" alt="hayes ai spcx dilution" width="567" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34-567x660.webp 567w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34-361x420.webp 361w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34-768x893.webp 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34-750x872.webp 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34-1140x1326.webp 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.26.34.webp 1164w" sizes="auto, (max-width: 567px) 100vw, 567px" />
+<p>At first glance, AI IPO dilution sounds bearish for every risk asset, crypto included. In the short term, Hayes thinks it could be.</p>
+<p>But the full thesis tells a far more optimistic story for the <a href="https://bitcoinist.com/category/bitcoin/" target="_blank" rel="noopener noreferrer nofollow ">crypto market</a>.</p>
+<h2>What AI IPO Dilution Means For The Market</h2>
+<p>Hayes&#8217; core point is that the AI trade runs on sentiment. Investors fund the sector because they believe in its future profits, and the clearest scoreboard for that belief is the share price.</p>
+<p>If SpaceX, Anthropic or OpenAI trade below their IPO price because of insider selling, Hayes expects investors to start doubting the companies themselves, regardless of how the underlying business performs.</p>
+<p>These listings are also about more than equity. Hayes argues the companies are going public to tap corporate bond markets directly. Weak share prices would push bond buyers to demand higher yields, making the AI infrastructure buildout far more expensive to fund.</p>
+<p>Because banks are deeply involved in financing that buildout, slower AI lending means slower credit growth and less dollar liquidity in the system. That is how AI IPO dilution could weigh on Bitcoin and crypto in the near term.</p>
+<p>Markets already got a taste of AI nerves this week, when chipmakers and tech stocks led a sharp sell-off on Wall Street and Bitcoin slid along with them.</p>
+<h2>AI Has Been Draining Crypto&#8217;s Liquidity</h2>
+<p>Here is where the optimistic angle comes in.</p>
+<p>Hayes has long argued that Bitcoin moves with dollar liquidity, and that <a href="https://bitcoinist.com/bitcoin-needs-expanding-dollar-liquidity-to-regain-momentum-hayes/" target="_blank" rel="noopener noreferrer nofollow ">Bitcoin needs expanding dollar liquidity to regain momentum</a>. In recent commentary, he estimated that around $1.5 trillion in AI-related debt was issued between 2022 and 2026, funding the AI boom while leaving little fresh capital for Bitcoin.</p>
+<p>In other words, AI has been competing with crypto for the same pool of money. If AI IPO dilution slows the AI credit machine, that competition eases.</p>
+<h2>Why AI IPO Dilution Could End In A Crypto Rally</h2>
+<p>The most bullish part of the essay is where it ends.</p>
+<p>Hayes argues that if the AI bubble eventually triggers a broader financial crisis, central banks will step in with bailouts. History shows what usually follows: new money creation, falling real yields and a rush into scarce assets.</p>
+<p>He believes that fresh wave of liquidity could once again push Bitcoin and the wider crypto market higher. It is the same playbook that fueled crypto&#8217;s biggest rallies after past rounds of monetary easing.</p>
+<p>To be clear, Hayes is not calling for an immediate rally. His firm, Maelstrom, plans to stay on the sidelines until liquidity conditions improve. But for long-term holders, his roadmap points to short-term turbulence followed by a much friendlier environment for digital assets.</p>
+<h2>Bitcoin Can&#8217;t Be Diluted</h2>
+<p>There is another reason crypto investors can approach this story with confidence.</p>
+<p>Hayes uses Zcash as his cautionary example. Even with ZEC&#8217;s market cap at record levels, he points out that many investors who bought at launch in 2016 are still underwater because of early supply dynamics.</p>
+<p>Crypto has lived with this lesson for years. Traders now routinely check token unlock schedules, vesting cliffs and emission rates before they buy. Wall Street is only now facing the same problem with mega-cap AI listings.</p>
+<p>Bitcoin sits at the opposite end of that spectrum. Its supply is capped at 21 million coins, there are no insiders waiting for a lockup to expire, and after the 2024 halving its annual issuance fell below 1%. While AI IPO dilution could expand share supply by tens of percent within a year, Bitcoin&#8217;s schedule is fixed and fully public.</p>
+<p>If dilution becomes the defining market story of 2027, that contrast could become one of Bitcoin&#8217;s strongest selling points, especially for institutions that already have easy access through <a href="https://bitcoinist.com/one-year-bitcoin-spot-etfs-became-top-performers/" target="_blank" rel="noopener noreferrer nofollow ">spot Bitcoin ETFs</a>.</p>
+<p>What do you think happens next?</p>
+<p>Will AI IPO dilution drag crypto lower first, or will the liquidity that follows kick off the next major crypto rally?</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/AI-Processor-with-Silver-Crypto-Tokens-630x420.webp" width="630" height="420" />	</item>
+		<item>
+		<title>Bitcoin Is Repeating The 2023 Setup That Sparked Its Last Major Rally, Analyst Says</title>
+		<link>https://bitcoinist.com/bitcoin-is-repeating-the-2023-setup-that-sparked-its-last-major-rally-analyst-says/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sat, 07 Nov 2026 13:04:53 +0000</pubDate>
+				<category><![CDATA[Bitcoin]]></category>
+		<category><![CDATA[Bitcoin News]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[bitcoin analyst]]></category>
+		<category><![CDATA[Bitcoin future]]></category>
+		<category><![CDATA[bitcoin outlook]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[Bitcoin may be quietly setting up its next big move. Despite this week&#8217;s sell-off, a crypto analyst has spotted a pattern on the weekly chart that last appeared in 2023, shortly before BTC launched a rally that more than doubled its price. BTC is currently trading around $76,000, sitting just above its weekly 50-period moving [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Bitcoin may be quietly setting up its next big move. Despite this week&#8217;s sell-off, a crypto analyst has spotted a pattern on the weekly chart that last appeared in 2023, shortly before BTC launched a rally that more than doubled its price.</p>
+<p>BTC is currently trading around $76,000, sitting just above its weekly 50-period moving average (MA) at roughly $75,500. That comes after the price was rejected from the weekly MA 100 near $87,400, leaving Bitcoin stuck between the two lines.</p>
+<p>According to the analyst, this is exactly where Bitcoin found itself in 2023. Back then, BTC spent months consolidating between the weekly MA 50 and MA 100 before breaking out and kicking off a new bull phase.</p>
+<img loading="lazy" decoding="async" class="wp-image-706786 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-916x660.jpg" alt="bitcoin outlook midterm" width="916" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-916x660.jpg 916w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-583x420.jpg 583w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-768x553.jpg 768w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-1536x1107.jpg 1536w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-120x86.jpg 120w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-750x541.jpg 750w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ-1140x822.jpg 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/HWc_KQ4acAAiptQ.jpg 1876w" sizes="auto, (max-width: 916px) 100vw, 916px" />
+<p>The question now is whether the <a href="https://bitcoinist.com/category/bitcoin/" target="_blank" rel="noopener noreferrer nofollow ">Bitcoin market</a> is about to replay that script.</p>
+<p>And the last time this happened, the results were hard to ignore.</p>
+<h2>How The 2023 Setup Played Out</h2>
+<p>For most of 2023, Bitcoin moved sideways. Between mid-March and mid-October, the price was largely stuck in a narrow range between roughly $24,000 and $28,000 as the market recovered from the 2022 crash.</p>
+<p>Then things changed fast. On October 23, 2023, BTC pushed through its July high of around $31,800 and <a href="https://bitcoinist.com/breaking-bitcoin-price-sets-new-2023-record-52-week-high/" target="_blank" rel="noopener noreferrer nofollow ">set a new 2023 record and 52-week high</a>. The move squeezed traders betting against the market, with <a href="https://bitcoinist.com/crypto-shorts-86-million-beating-btc-marches-31000" target="_blank" rel="noopener noreferrer nofollow ">crypto shorts taking an $86 million beating</a> in a single day.</p>
+<p>A day later, Bitcoin topped $35,000 for the first time since May 2022. The main driver was growing confidence that BlackRock&#8217;s spot Bitcoin ETF would soon be approved, alongside short liquidations and steady institutional buying, as covered in this breakdown of <a href="https://bitcoinist.com/bitcoin-price-35000-decoding-5-major-reasons/" target="_blank" rel="noopener noreferrer nofollow ">why Bitcoin was skyrocketing to $35,000</a>.</p>
+<p>The rally didn&#8217;t stop there. BTC <a href="https://bitcoinist.com/bitcoin-price-back-above-39k/" target="_blank" rel="noopener noreferrer nofollow ">blasted back above $39,000</a> in early December, cleared $44,000 shortly after, and closed 2023 with a gain of roughly 156%.</p>
+<p>The breakout was then confirmed by fundamentals. On January 10, 2024, the SEC <a href="https://bitcoinist.com/one-year-bitcoin-spot-etfs-became-top-performers/" target="_blank" rel="noopener noreferrer nofollow ">approved 11 spot Bitcoin ETFs</a>, and by March 2024 Bitcoin was setting fresh all-time highs above $73,000.</p>
+<h2>Bitcoin Is Back Between The Same Moving Averages</h2>
+<p>Fast forward to 2026, and the weekly chart looks strikingly similar.</p>
+<p>In late September, Bitcoin was <a href="https://bitcoinist.com/15-6b-bitcoin-options-expiry-clears-as-btc-holds-near-84k/" target="_blank" rel="noopener noreferrer nofollow ">holding near $84,000</a>. It then tested the weekly MA 100 near $87,400, got rejected, and slid back toward the weekly MA 50.</p>
+<p>That puts BTC in the same zone it occupied before the 2023 breakout: above the MA 50, below the MA 100, and building a base. If the pattern holds, this consolidation could be the launchpad rather than the top.</p>
+<h2>Key Levels Bulls Need To Watch</h2>
+<p>On the support side, the weekly MA 50 at about $75,500 is the first line of defense. Bitcoin is trading just above it right now, so holding this level on a weekly close matters.</p>
+<p>If that fails, the next major support is the weekly MA 200 at around $67,800. In past cycles, this long-term average has acted as a key floor during corrections.</p>
+<p>On the upside, the first hurdle is $82,000. Above that, the weekly MA 100 near $87,400 is the big one.</p>
+<p>According to the analyst, if Bitcoin reclaims the weekly MA 100 and holds above it, the door opens for another major rally, just like in 2023.</p>
+<h2>Momentum Is Cooling, Not Breaking</h2>
+<p>The momentum indicators support a patient but constructive view.</p>
+<p>The weekly RSI is sitting near 50, which is neutral territory and still above the zone usually associated with bear markets. In other words, the broader trend has cooled but has not broken down.</p>
+<p>The Stochastic RSI looks weaker, suggesting short-term momentum could fade a little further. The analyst sees room for the RSI to dip toward 44 before Bitcoin makes its next move higher. That kind of reset is common during consolidations and often clears the way for stronger rallies.</p>
+<p>The similarities to 2023 are hard to ignore. But first, Bitcoin needs to hold its support.</p>
+<p>What do you think happens next?</p>
+<p>Is Bitcoin about to replay its 2023 breakout, or does it need one more dip toward $67,800 before the next leg up?</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/Golden-Bitcoin-before-the-breakout-630x420.webp" width="630" height="420" />	</item>
+		<item>
+		<title>Zcash Price Repeats Setup Behind Its 250% Rally, Analyst Says</title>
+		<link>https://bitcoinist.com/zcash-price-repeats-setup-behind-its-250-rally-analyst-says/</link>
+		
+		<dc:creator><![CDATA[BITCOINIST EDITOR]]></dc:creator>
+		<pubDate>Sat, 07 Nov 2026 11:44:49 +0000</pubDate>
+				<category><![CDATA[Altcoin News]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[ZCash]]></category>
+		<category><![CDATA[ZCash Price]]></category>
+		<category><![CDATA[ZEC]]></category>
+		<category><![CDATA[ZEC price]]></category>
+		<category><![CDATA[zec rally]]></category>
+		<guid isPermaLink="false"></guid>
+
+					<description><![CDATA[The Zcash price may be gearing up for its next big move. After a sharp pullback from its all-time high, ZEC is consolidating in a range that looks strikingly similar to the one that launched its last explosive rally. ZEC has spent the past several weeks trading between roughly $1,200 and $1,400, after peaking near [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p data-lfile-container="a4a25962-2e50-41ca-904e-3c11a4878f87" data-pm-slice="1 1 []"><strong>The Zcash price may be gearing up for its next big move. After a sharp pullback from its all-time high, ZEC is consolidating in a range that looks strikingly similar to the one that launched its last explosive rally.</strong></p>
+<p>ZEC has spent the past several weeks trading between roughly $1,200 and $1,400, after peaking near $1,700 in late September. The token briefly pushed back toward $1,370 this week after the NU7 network upgrade went live.</p>
+<p>According to crypto analyst Alaoui Capital, this is not the first time Zcash has built a base like this. In a <a href="https://x.com/Alaouicapital/status/2117680708638343503" target="_blank" rel="noopener noreferrer nofollow">post on X</a>, the analyst pointed out that ZEC consolidated around the $450 to $480 area over the summer before breaking out and running all the way to its record high. Now, a similar structure is forming around $1,200.</p>
+<img loading="lazy" decoding="async" class="wp-image-706796 size-large" src="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16-582x660.png" alt="ZEC trend triangle forming rally" width="582" height="660" srcset="https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16-582x660.png 582w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16-371x420.png 371w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16-768x870.png 768w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16-750x850.png 750w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16-1140x1292.png 1140w, https://bitcoinist.com/wp-content/uploads/2026/11/Screenshot-2026-11-07-at-12.37.16.png 1186w" sizes="auto, (max-width: 582px) 100vw, 582px" />
+<p>If history repeats, the current range could be a launchpad rather than a top for the <a href="https://bitcoinist.com/category/altcoin-price/" target="_blank" rel="noopener noreferrer nofollow ">altcoin market&#8217;s</a> best performer of 2026.</p>
+<p>And the previous breakout was hard to ignore.</p>
+<h2>Zcash Price Is Consolidating Just Like Before Its Last Breakout</h2>
+<p>In mid-August, ZEC was trading near $478. Within roughly six weeks, it climbed to an all-time high just under $1,700, a gain of more than 250%.</p>
+<p>Before that run, the Zcash price moved sideways in a tight box for several weeks, shaking out short-term traders while buyers quietly absorbed supply. Once that range broke, the move was fast and steep.</p>
+<p>The chart shared by Alaoui Capital shows ZEC now carving out a similar consolidation box below the September peak. The key difference is the starting point: this time, the base is forming near $1,200 instead of $450.</p>
+<h2>Ascending Triangle Points Toward $1,500 To $1,700</h2>
+<p>Another analyst, Ardi, sees a bullish structure developing on the lower timeframes. According to his analysis, ZEC has formed an ascending triangle from lows near $1,050, with a rising trendline of higher lows pressing price toward horizontal resistance.</p>
+<p>That resistance sits at $1,370, a level ZEC has repeatedly struggled to clear. Ardi said a decisive break above it would end his short position and open the door to a bullish trend toward $1,500 to $1,700.</p>
+<p>If ZEC fails at $1,370 again, he expects the downtrend to stay intact, with $1,210 and then $1,100 as the next supports to watch.</p>
+<h2>The Bigger Picture: A $2,500 Long-Term Target</h2>
+<p>The current setup also fits into a larger bullish structure that started forming earlier this year.</p>
+<p>In early September, an FX Empire analysis <a href="https://finance.yahoo.com/markets/crypto/articles/zcash-price-prediction-confirmed-bullish-143158512.html" target="_blank" rel="noopener noreferrer nofollow">published on Yahoo Finance</a> highlighted an ascending triangle on the daily chart dating back to March 2026. ZEC broke above the $675 to $700 resistance zone in late August, confirming the pattern.</p>
+<p>Using the height of that triangle, the analysis projected a long-term target of $2,500 for ZEC. At the time, it also pointed to the share of shielded ZEC climbing to its highest level in almost two years, a sign of growing use of the network&#8217;s privacy features.</p>
+<h2>NU7 And Ironwood Add Fundamental Fuel</h2>
+<p>The Zcash price is not moving on charts alone. The network has shipped two major upgrades in recent months.</p>
+<p>In late July, Zcash activated Ironwood, a new formally verified shielded pool introduced after a vulnerability was found in the older Orchard pool. The upgrade also added a turnstile mechanism that makes the total ZEC supply easier to audit.</p>
+<p>This week, NU7 went live on mainnet. It cuts the target block time from 75 seconds to 25 seconds, so private payments confirm roughly three times faster, and introduces a new fee mechanism designed to support network security while keeping the 21 million coin cap intact.</p>
+<p>The ecosystem is also debating how development is funded, with a Zcash co-founder <a href="https://bitcoinist.com/zcash-co-founder-wants-to-end-grants-funding-stream/" target="_blank" rel="noopener noreferrer nofollow ">calling to end the grants funding stream</a>. Privacy coins have also held up better than most of the market during this week&#8217;s <a href="https://bitcoinist.com/bitcoin-holds-critical-76k-level-as-ai-sell-off-triggers-market-wide-panic/" target="_blank" rel="noopener noreferrer nofollow ">AI-driven sell-off</a>.</p>
+<h2>Zcash Price Levels To Watch</h2>
+<p>On the upside, $1,370 to $1,400 is the first major hurdle. Clearing it would put $1,500 to $1,700 back in play, and a close above the all-time high near $1,700 would open the path toward the $2,500 long-term target.</p>
+<p>On the downside, $1,200 to $1,210 is the first support, followed by $1,100. The most important floor sits at $1,030 to $1,050.</p>
+<p>That zone matters because some chartists see a potential head and shoulders forming on the daily chart, with a left shoulder near $1,300, a head near $1,700 and a right shoulder around $1,400. A daily close below $1,030 to $1,050 on rising volume would confirm that bearish pattern. Until then, it remains a developing setup, and a sustained move above $1,400 would weaken it.</p>
+<p>Analyst Crypto Patel has also cautioned that ZEC could face a deeper 50% to 70% correction unless it closes above its $1,699 all-time high on a higher timeframe.</p>
+<p>For now, bulls control the bigger structure as long as the $1,030 to $1,050 floor holds.</p>
+<p>What do you think happens next?</p>
+<p>Is Zcash about to repeat its summer breakout and push toward new highs, or does it need to retest $1,050 before the next leg up?</p>
+]]></content:encoded>
+					
+		
+		
+		<media:content medium="image" url="https://bitcoinist.com/wp-content/uploads/2026/11/Zcash-Coin-and-a-Watchful-Market-Pattern-630x420.webp" width="630" height="420" />	</item>
+	</channel>
+</rss>
