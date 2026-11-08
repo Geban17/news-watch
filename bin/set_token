@@ -1,0 +1,35 @@
+#!/bin/bash
+# Токен Новостного сторожа — Олег запускает САМ в своём Терминале (не через Claude): ~/PyCharmMiscProject/news-watch/bin/set_token
+#   1. токен — скрытым вводом (на экране ничего), в командную строку и историю оболочки не попадает;
+#   2. проверка в Telegram (getMe) прямо с мака — адрес с токеном уходит curl через stdin, не аргументом;
+#   3. Олег пишет боту /start — так бот узнаёт его chat_id (белый список: отвечает только ему);
+#   4. на сервер — потоком через ssh в /opt/news-watch/.env (root, 600), служба включается и стартует.
+# Печатается только @имя бота и «записано».
+set -euo pipefail
+SERVER="${NEWS_SERVER:-root@209.250.234.38}"
+tg() {   # tg <метод> [параметры] — токен не попадает в аргументы процессов
+    printf 'url = "https://api.telegram.org/bot%s/%s"\n' "$TOKEN" "$1" | curl -s -m 30 -K - ${2:+--data "$2"}
+}
+read -rsp "Токен от @BotFather (не отображается): " TOKEN; echo
+[ -n "$TOKEN" ] || { echo "пусто — выход"; exit 1; }
+name=$(tg getMe | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["result"]["username"] if d.get("ok") else "")')
+[ -n "$name" ] || { echo "Telegram не принял токен — проверь и запусти снова"; exit 1; }
+echo "Бот: @$name. Напиши ему /start в Telegram — жду до 3 минут…"
+chat=""
+for _ in $(seq 1 18); do
+    chat=$(tg getUpdates "timeout=10" | python3 -c '
+import json, sys
+d = json.load(sys.stdin)
+ids = [u["message"]["chat"]["id"] for u in d.get("result", []) if u.get("message", {}).get("text", "").startswith("/start")]
+print(ids[-1] if ids else "")')
+    [ -n "$chat" ] && break
+done
+[ -n "$chat" ] || { echo "/start не пришёл за 3 минуты — запусти снова"; exit 1; }
+printf 'NEWS_TG_TOKEN=%s\nNEWS_TG_CHAT_ID=%s\n' "$TOKEN" "$chat" | ssh -o BatchMode=yes "$SERVER" '
+    umask 077; set -e
+    test -d /opt/news-watch || { echo "на сервере нет /opt/news-watch — сначала scripts/deploy.sh"; exit 1; }
+    cat > /opt/news-watch/.env.new && chown root:root /opt/news-watch/.env.new && chmod 600 /opt/news-watch/.env.new
+    mv /opt/news-watch/.env.new /opt/news-watch/.env
+    systemctl enable -q news-watch && systemctl restart news-watch && sleep 3 && echo "служба: $(systemctl is-active news-watch)"'
+unset TOKEN
+echo "✅ записано: @$name, твой чат — в белом списке. Нажми в боте «➕ монета»."

@@ -1,0 +1,38 @@
+# Новостной сторож — отдельная служба рядом с боем (план PLAN_NEWS_WATCH_0811 v2, «да» Олега 08.11).
+# Пределы: 150 МБ памяти, 10 % процессора, самый низкий приоритет; каталоги боя, штаба и T-800 ей недоступны.
+[Unit]
+Description=Новостной сторож (отдельно от боя)
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=3600
+StartLimitBurst=5
+
+[Service]
+User=news
+Group=news
+WorkingDirectory=/opt/news-watch
+EnvironmentFile=/opt/news-watch/.env
+Environment=NEWS_STATE_DIR=/opt/news-watch/state
+ExecStart=/opt/news-watch/.venv/bin/python -m news_watch.main
+Restart=on-failure
+RestartSec=60
+Nice=19
+IOSchedulingClass=idle
+CPUQuota=10%
+MemoryHigh=120M
+MemoryMax=150M
+ProtectSystem=strict
+ReadWritePaths=/opt/news-watch/state
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+InaccessiblePaths=-/opt/spot-sweep-bot -/opt/hq -/opt/t800
+LogLevelMax=warning
+LogRateLimitIntervalSec=60
+LogRateLimitBurst=20
+
+[Install]
+WantedBy=multi-user.target

@@ -42,22 +42,28 @@ async def pick_venue(net, ticker: str) -> tuple[str, str] | None:
 
 
 async def history15(net, venue: str, symbol: str, now_ms: int | None = None):
-    """30 дней 15-минуток: три страницы по 1000. Сбой — None (порог «не посчитан»), не пустая история."""
+    """30 дней 15-минуток постранично (Binance отдаёт до 1000 за раз, MEXC — до 500). Сбой — None (порог «не посчитан»),
+    не пустая история."""
     now_ms = now_ms or int(time.time() * 1000)
     start = now_ms - C.HIST_DAYS * 86_400_000
     ts, cl, vo = [], [], []
     cursor = start
-    for _ in range(4):
+    for _ in range(C.HIST_DAYS * 96 // 500 + 3):
+        # MEXC без endTime отдаёт последние 500 свечей, а не с startTime (проверено 08.11) — окно задаётся с обеих сторон.
         raw, err = await net.get(f"{VENUES[venue]}/api/v3/klines",
-                                 {"symbol": symbol, "interval": "15m", "startTime": cursor, "limit": 1000})
+                                 {"symbol": symbol, "interval": "15m", "startTime": cursor,
+                                  "endTime": cursor + 499 * 900_000, "limit": 500})
         if raw is None:
             return None
         t, c, v = parse_klines(raw)
         if not t:
-            break
+            cursor += 500 * 900_000                      # монеты ещё не было в этом окне — дальше
+            if cursor >= now_ms:
+                break
+            continue
         ts += t; cl += c; vo += v
-        cursor = t[-1] + 900_000
-        if cursor >= now_ms or len(t) < 1000:
+        cursor = max(t[-1] + 900_000, cursor + 500 * 900_000)
+        if cursor >= now_ms:
             break
     # Последняя свеча ещё идёт — отрезаем.
     while ts and ts[-1] + 900_000 > now_ms:

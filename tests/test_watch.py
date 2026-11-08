@@ -163,3 +163,25 @@ def test_down_edge_is_the_coin_own_02_percent_tail():
     r = [math.log(cl[i] / cl[i - 4]) for i in range(4, len(cl))]
     share = sum(x <= e.down for x in r) / len(r)
     assert 0.001 <= share <= 0.003, share
+
+
+def test_history_pages_with_both_bounds_like_mexc_needs():
+    """MEXC без endTime отдаёт последние 500 свечей (08.11) — каждое окно задаётся с обеих сторон, 30 дней целиком."""
+    import json as _j
+    from news_watch import prices as P
+    now_ms = 1_794_200_000_000
+    asked = []
+
+    class _N:
+        async def get(self, url, params=None):
+            asked.append(params)
+            if "endTime" not in params:                       # как MEXC: без конца окна — последние 500
+                s = now_ms - 500 * 900_000
+            else:
+                s = params["startTime"]
+            rows = [[s + i * 900_000, "1", "1", "1", "1", "1", 0, "10"] for i in range(500)
+                    if s + i * 900_000 <= min(params.get("endTime", now_ms), now_ms)]
+            return _j.dumps(rows).encode(), None
+
+    cl, vo = asyncio.run(P.history15(_N(), "MEXC", "MXUSDT", now_ms=now_ms))
+    assert len(cl) >= 30 * 96 - 2 and all(p.get("endTime") for p in asked)

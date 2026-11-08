@@ -88,7 +88,7 @@ def _local(tag: str) -> str:
 def rss(raw: bytes) -> list[dict]:
     """RSS 2.0 и Atom: заголовок, ссылка, время."""
     # Чужой XML: объявления сущностей не нужны ни одной ленте — отказ до разбора (XXE / «billion laughs»).
-    if b"<!ENTITY" in raw[:4096]:
+    if b"<!ENTITY" in raw or b"<!entity" in raw.lower():
         raise ParseError("xml: объявление сущностей")
     try:
         root = ET.fromstring(raw)
