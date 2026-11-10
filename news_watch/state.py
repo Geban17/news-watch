@@ -39,6 +39,7 @@ class State:
         self.events: dict[str, dict] = s.get("events", {})
         self.coin_last: dict[str, dict] = s.get("coins", {})
         self.primed: dict[str, float] = s.get("primed", {})
+        self.broken: set[str] = set(s.get("broken", []))                 # «перестал читаться» уже сказано
 
     def save_coins(self) -> None:
         _save(self.folder / "coins.json", self.coins)
@@ -49,4 +50,4 @@ class State:
         self.events = {k: e for k, e in self.events.items() if e["ts"] >= cut}
         self.coin_last = {k: e for k, e in self.coin_last.items() if e["ts"] >= cut}
         _save(self.folder / "sent.json", {"items": self.items, "events": self.events, "coins": self.coin_last,
-                                          "primed": self.primed})
+                                          "primed": self.primed, "broken": sorted(self.broken)})

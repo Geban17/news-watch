@@ -44,6 +44,13 @@ def _day(ts: float) -> str:
     return time.strftime("%Y-%m-%d", time.gmtime(ts))
 
 
+def _same(it) -> str | None:
+    """Ключ «та же новость у того же источника»: лента и её запасная страница («SEC» / «SEC · страница») — один ключ по
+    ссылке. Только у источников с запасным адресом (C.FALLBACKS): у прочих ссылки не сверяются."""
+    base = it.source.split(" · ")[0]
+    return f"url|{base}|{it.url}" if it.url and base in C.FALLBACKS else None
+
+
 class Decider:
     def __init__(self, state: State, now=time.time):
         self.st, self.now = state, now
@@ -71,13 +78,17 @@ class Decider:
             # Первый обход: всё, что уже лежит в ленте, — «видено» без отправки (иначе придёт архив за месяц).
             for it in items:
                 self.st.items[it.key] = now
+                if _same(it):
+                    self.st.items[_same(it)] = now
             self.st.primed[source] = now
             return []
         actions = []
         for it in items:
-            if it.key in self.st.items:
-                continue
+            if it.key in self.st.items or (_same(it) and _same(it) in self.st.items):
+                continue                                  # та же новость с другого адреса источника (лента / страница) — один раз
             self.st.items[it.key] = now
+            if _same(it):
+                self.st.items[_same(it)] = now
             listed = self.coins()
             # Токены бирж, которых нет в списке Олега: только 🔴 о самой бирже (координатор 2123).
             extra = [Coin(t, None, C.ISSUERS[t][0]) for t in sorted(C.ISSUER_TOKENS) if t not in self.st.coins]

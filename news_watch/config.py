@@ -44,6 +44,11 @@ SOURCES = [
     ("Bitcoin Magazine", "media", "rss", "https://bitcoinmagazine.com/feed", 300, W_MEDIA),
     ("Bitcoinist", "media", "rss", "https://bitcoinist.com/feed/", 300, W_MEDIA),
 ]
+# Запасной адрес источника: основной не ответил — читается этот (своё имя «… · страница»: первый обход — «видено» без отправки).
+# SEC: лента пресс-релизов отдаёт голый 404 nginx с 10.11 ~17:30 UTC (сайт SEC на неё по-прежнему ссылается; соседние ленты
+# SEC живы) — пресс-релизы выходят, читаются со страницы newsroom.
+FALLBACKS = {"SEC": ("sec_html", "https://www.sec.gov/newsroom/press-releases")}
+
 # Binance (поток объявлений с ключом или неофициальная страница) — по ответу Олега; пока не включён.
 BINANCE_CMS = ("Binance", "exchange", "binance_cms",
                "https://www.binance.com/bapi/composite/v1/public/cms/article/list/query?type=1&pageNo=1&pageSize=20",

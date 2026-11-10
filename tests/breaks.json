@@ -3,8 +3,8 @@
   "file": "news_watch/alerts.py",
   "old": "            if score >= 1.0:",
   "new": "            if score > 1.0:",
-  "expect": 4,
-  "why": "🔴 при счёте ровно 1.0 (официальный источник × тяжёлые слова): приёмка FinCEN + ухудшение в паузе + та же новость завтра (одна официальная, счёт 1.0) + 🔴 о бирже для токена вне списка (2123)"
+  "expect": 5,
+  "why": "🔴 при счёте ровно 1.0 (официальный источник × тяжёлые слова): приёмка FinCEN + ухудшение в паузе + та же новость завтра (одна официальная, счёт 1.0) + 🔴 о бирже для токена вне списка (2123) (10.11: + тест SEC «страница → лента»)"
  },
  {
   "file": "news_watch/alerts.py",
@@ -31,15 +31,15 @@
   "file": "news_watch/alerts.py",
   "old": "        if source not in self.st.primed:",
   "new": "        if False:",
-  "expect": 1,
-  "why": "первый обход источника — только «видено»"
+  "expect": 2,
+  "why": "первый обход источника — только «видено» (10.11: ловит и тест запасной страницы SEC)"
  },
  {
   "file": "news_watch/alerts.py",
-  "old": "            if it.key in self.st.items:\n                continue",
-  "new": "            if it.key in self.st.items:\n                pass",
+  "old": "            if it.key in self.st.items or (_same(it) and _same(it) in self.st.items):\n                continue",
+  "new": "            if it.key in self.st.items or (_same(it) and _same(it) in self.st.items):\n                pass",
   "expect": 1,
-  "why": "та же новость на следующие сутки не приходит снова"
+  "why": "та же новость на следующие сутки не приходит снова (повтор SEC «страница → лента» в те же сутки держит ещё и отсечка события по монете — поэтому ловит один тест)"
  },
  {
   "file": "news_watch/thresholds.py",
@@ -66,8 +66,8 @@
   "file": "news_watch/match.py",
   "old": "    if issuer and any(",
   "new": "    if False and any(",
-  "expect": 3,
-  "why": "монета → биржа-эмитент (MX ← MEXC) + 🔴 о бирже вне списка, 🟠 BNB из 2 СМИ (2123)"
+  "expect": 4,
+  "why": "монета → биржа-эмитент (MX ← MEXC) + 🔴 о бирже вне списка, 🟠 BNB из 2 СМИ (2123) (10.11: + тест SEC «страница → лента»)"
  },
  {
   "file": "news_watch/match.py",
@@ -108,8 +108,8 @@
   "file": "news_watch/main.py",
   "old": "if self.bad[name] >= C.BROKEN_AFTER and",
   "new": "if self.bad[name] >= 1 and",
-  "expect": 1,
-  "why": "«перестал читаться» — после 2 обходов подряд"
+  "expect": 2,
+  "why": "«перестал читаться» — после 2 обходов подряд (10.11: ловит и тест запасной страницы SEC)"
  },
  {
   "file": "news_watch/alerts.py",
@@ -180,5 +180,40 @@
   "new": "    if raw[:2] in (b\"\\xff\\xfe\", b\"\\xfe\\xff\"):",
   "expect": 1,
   "why": "XML в UTF-16 без метки — отказ (нули прячут <!ENTITY от поиска)"
+ },
+ {
+  "file": "news_watch/main.py",
+  "old": "            if self.good[name] < C.BROKEN_AFTER:\n                return None",
+  "new": "            if False:\n                return None",
+  "expect": 3,
+  "why": "починка засчитывается сразу после одного хорошего обхода: мигание шлёт пачку «перестал / снова» (SEC 404, 10.11)"
+ },
+ {
+  "file": "news_watch/main.py",
+  "old": "            self.reported.add(name)\n            self.save()",
+  "new": "            self.reported.add(name)",
+  "expect": 1,
+  "why": "список сломанных не сохраняется — после перезапуска «перестал читаться» уходит Олегу снова"
+ },
+ {
+  "file": "news_watch/main.py",
+  "old": "            elif name in C.FALLBACKS and (fb := await self.fallback(src)):",
+  "new": "            elif False and (fb := await self.fallback(src)):",
+  "expect": 1,
+  "why": "запасной адрес не читается: лента SEC 404 — пресс-релизы SEC не видны вовсе"
+ },
+ {
+  "file": "news_watch/alerts.py",
+  "old": "if it.url and base in C.FALLBACKS else None",
+  "new": "if it.url and base not in C.FALLBACKS else None",
+  "expect": 2,
+  "why": "сверка по ссылке у всех источников (склеивает разные новости одного СМИ) и не у SEC (одна новость дважды: со страницы и из ленты)"
+ },
+ {
+  "file": "news_watch/sources.py",
+  "old": "        a = _SEC_A.search(row)\n        if not a:\n            continue",
+  "new": "        a = _SEC_A.search(row)\n        if a:\n            continue",
+  "expect": 1,
+  "why": "страница пресс-релизов SEC разбирается пусто — запасной путь мёртв"
  }
 ]

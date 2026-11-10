@@ -4,6 +4,7 @@ from __future__ import annotations
 import asyncio
 import math
 import random
+from pathlib import Path
 
 from news_watch import config as C
 from news_watch.alerts import Decider
@@ -148,8 +149,28 @@ def test_source_broken_reported_once_and_recovery_once():
     assert h.result("FinCEN", False, "пусто при живом ответе") is None
     assert h.result("FinCEN", False, "пусто при живом ответе").startswith("🛠 FinCEN перестал читаться")
     assert h.result("FinCEN", False, "x") is None
+    assert h.result("FinCEN", True) is None                       # один хороший обход — ещё не починка
     assert h.result("FinCEN", True) == "🛠 FinCEN снова читается"
     assert h.result("FinCEN", True) is None
+
+
+def test_flapping_source_does_not_send_a_pack():
+    h = Health()
+    sent = [h.result("SEC", ok, "ответ 404") for ok in (False, False, True, False, True, False, False, True, False)]
+    assert [x for x in sent if x] == ["🛠 SEC перестал читаться (ответ 404) — остальные источники работают"]
+
+
+def test_broken_survives_restart(tmp_path):
+    st = State(tmp_path)
+    h = Health(st.broken, st.save_sent)
+    h.result("SEC", False, "ответ 404")
+    assert h.result("SEC", False, "ответ 404")
+    st2 = State(tmp_path)                                           # перезапуск службы
+    h2 = Health(st2.broken, st2.save_sent)
+    assert h2.result("SEC", False, "ответ 404") is None and h2.result("SEC", False, "ответ 404") is None
+    h2.result("SEC", True)
+    assert h2.result("SEC", True) == "🛠 SEC снова читается"
+    assert State(tmp_path).broken == set()
 
 
 def test_down_edge_is_the_coin_own_02_percent_tail():
@@ -185,3 +206,61 @@ def test_history_pages_with_both_bounds_like_mexc_needs():
 
     cl, vo = asyncio.run(P.history15(_N(), "MEXC", "MXUSDT", now_ms=now_ms))
     assert len(cl) >= 30 * 96 - 2 and all(p.get("endTime") for p in asked)
+
+
+# ---- SEC: лента 404 → страница пресс-релизов (10.11) -------------------------------------------------------------
+class _Net:
+    def __init__(self, answers):
+        self.answers, self.calls = answers, []
+
+    async def get(self, url, params=None):
+        self.calls.append(url)
+        return self.answers.get(url, (None, "ответ 404"))
+
+
+class _Bot:
+    def __init__(self):
+        self.sent = []
+
+    async def send(self, text, **kw):
+        self.sent.append(text)
+        return 1
+
+
+def _watch(tmp_path, answers):
+    from news_watch import config as C
+    from news_watch.main import Watch
+    st = State(tmp_path)
+    st.primed = {s[0]: 0 for s in C.SOURCES}
+    w = Watch(_Net(answers), _Bot(), st)
+    w.next_due = {s[0]: 1e18 for s in C.SOURCES if s[0] != "SEC"}       # обход только SEC
+    return w, st
+
+
+def test_sec_feed_404_reads_page_first_round_quietly(tmp_path):
+    import asyncio
+    page = (Path(__file__).parent / "fixtures" / "sec_press_page.html").read_bytes()
+    w, st = _watch(tmp_path, {"https://www.sec.gov/newsroom/press-releases": (page, "")})
+    asyncio.run(w.sources_round())
+    assert "https://www.sec.gov/newsroom/press-releases" in w.net.calls
+    assert w.bot.sent == []                                           # первый обход страницы — «видено», не архив Олегу
+    assert "SEC · страница" in st.primed
+    assert w.health.reported == set()                                 # источник читается (со страницы) — не «сломан»
+
+
+def test_sec_feed_and_page_down_is_reported_once(tmp_path):
+    import asyncio
+    w, st = _watch(tmp_path, {})
+    for _ in range(3):
+        w.next_due["SEC"] = 0
+        asyncio.run(w.sources_round())
+    assert [t for t in w.bot.sent if "SEC" in t] == ["🛠 SEC перестал читаться (ответ 404) — остальные источники работают"]
+
+
+def test_same_release_from_feed_after_page_is_not_resent():
+    from news_watch.alerts import _same
+    from news_watch.sources import Item
+    a = Item("SEC · страница", "gov", "SEC · страница|u", "t", "https://www.sec.gov/newsroom/press-releases/2026-113-x", None, 1.0)
+    b = Item("SEC", "gov", "SEC|guid", "t", "https://www.sec.gov/newsroom/press-releases/2026-113-x", None, 1.0)
+    assert _same(a) == _same(b) is not None
+    assert _same(Item("CoinDesk", "media", "k", "t", "https://x", None, 1.0)) is None   # у прочих ссылки не сверяются

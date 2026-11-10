@@ -19,22 +19,33 @@ log = logging.getLogger("news_watch")
 
 
 class Health:
-    """«Источник перестал читаться» — одна строка при поломке и одна при починке (правило 21: не смог ≠ пусто)."""
+    """«Источник перестал читаться» — одна строка при поломке и одна при починке (правило 21: не смог ≠ пусто).
+    Сломан — после BROKEN_AFTER плохих обходов подряд; починен — после стольких же хороших (мигание не шлёт пачку);
+    список сломанных живёт в состоянии — перезапуск службы не повторяет «перестал читаться»."""
 
-    def __init__(self):
+    def __init__(self, broken: set | None = None, save=lambda: None):
         self.bad: dict[str, int] = {}
-        self.reported: set[str] = set()
+        self.good: dict[str, int] = {}
+        self.reported: set[str] = broken if broken is not None else set()
+        self.save = save
 
-    def result(self, name: str, ok: bool, why: str = "") -> str | None:
+    def result(self, name: str, ok: bool, why: str = "", via: str = "") -> str | None:
         if ok:
             self.bad.pop(name, None)
-            if name in self.reported:
-                self.reported.discard(name)
-                return f"🛠 {name} снова читается"
-            return None
+            if name not in self.reported:
+                return None
+            self.good[name] = self.good.get(name, 0) + 1
+            if self.good[name] < C.BROKEN_AFTER:
+                return None
+            self.reported.discard(name)
+            self.good.pop(name, None)
+            self.save()
+            return f"🛠 {name} снова читается" + (f" ({via})" if via else "")
+        self.good.pop(name, None)
         self.bad[name] = self.bad.get(name, 0) + 1
         if self.bad[name] >= C.BROKEN_AFTER and name not in self.reported:
             self.reported.add(name)
+            self.save()
             return f"🛠 {name} перестал читаться ({why}) — остальные источники работают"
         return None
 
@@ -43,7 +54,7 @@ class Watch:
     def __init__(self, net: Net, bot: Bot, state: State, now=time.time):
         self.net, self.bot, self.st, self.now = net, bot, state, now
         self.dec = Decider(state, now)
-        self.health = Health()
+        self.health = Health(state.broken, state.save_sent)
         self.next_due: dict[str, float] = {}
         self.edges: dict[str, dict] = {}
         self.edges_ts: dict[str, float] = {}
@@ -100,20 +111,38 @@ class Watch:
                 continue
             self.next_due[name] = now + period
             raw, err = await self.net.get(url)
-            if raw is None:
-                note = self.health.result(name, False, err)
-            else:
+            items = None
+            if raw is not None:
                 try:
                     items = parse(src, raw)
                 except (ParseError, ValueError, KeyError, TypeError) as e:
                     items, err = None, f"не разобрался: {type(e).__name__}"
-                if items:
-                    note = self.health.result(name, True)
-                    await self.do(self.dec.on_items(name, items))
-                else:
-                    note = self.health.result(name, False, err or "пусто при живом ответе")
+                err = err or ("пусто при живом ответе" if not items else "")
+            if items:
+                note = self.health.result(name, True)
+                await self.do(self.dec.on_items(name, items))
+            elif name in C.FALLBACKS and (fb := await self.fallback(src)):
+                log.warning("%s: основной адрес — %s; читаю запасной", name, err)
+                note = self.health.result(name, True, via="со страницы: основная лента не отвечает")
+                await self.do(self.dec.on_items(fb[0][0], fb[1]))
+            else:
+                note = self.health.result(name, False, err)
             if note:
                 await self.do([Action("send", note)])
+
+    async def fallback(self, src: tuple):
+        """Запасной адрес: (источник «… · страница», пункты) или None. Своё имя — первый обход без отправки (архив)."""
+        name, kind, _p, _u, period, w = src
+        parser, url = C.FALLBACKS[name]
+        raw, _err = await self.net.get(url)
+        if raw is None:
+            return None
+        fsrc = (f"{name} · страница", kind, parser, url, period, w)
+        try:
+            items = parse(fsrc, raw)
+        except (ParseError, ValueError, KeyError, TypeError):
+            return None
+        return (fsrc, items) if items else None
 
     async def prices_round(self) -> None:
         now = self.now()

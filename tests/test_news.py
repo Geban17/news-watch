@@ -223,3 +223,16 @@ def test_xml_with_dtd_or_other_encoding_is_refused():
                 '<?xml version="1.0" encoding="UTF-16"?><!DOCTYPE r [<!ENTITY a "x">]><r>&a;</r>'.encode("utf-16-le")):
         with pytest.raises(ParseError):
             parse(src("SEC"), raw)
+
+
+def test_sec_release_from_page_then_feed_is_sent_once(tmp_path):
+    """10.11: лента SEC 404 → новость пришла со страницы; лента ожила — та же новость (та же ссылка) второй раз не уходит."""
+    st = _state(tmp_path, ["BNB"])
+    st.primed["SEC · страница"] = 0
+    dec = Decider(st, now=lambda: NOW)
+    url = "https://www.sec.gov/newsroom/press-releases/2026-113-sec-charges-binance"
+    page = Item("SEC · страница", "gov", f"SEC · страница|{url}", "SEC charges Binance with fraud", url, None, 1.0)
+    feed = Item("SEC", "gov", "SEC|7285d1d7-guid", "SEC charges Binance with fraud", url, None, 1.0)
+    first = dec.on_items("SEC · страница", [page])
+    assert [a.kind for a in first] == ["send"]
+    assert dec.on_items("SEC", [feed]) == []

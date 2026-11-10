@@ -155,8 +155,35 @@ def cftc(raw: bytes) -> list[dict]:
     return _links(raw, "https://www.cftc.gov", r'href="(/PressRoom/PressReleases/[0-9]+-[0-9]+)"[^>]*>([^<]{10,300})<')
 
 
+_SEC_ROW = re.compile(r'<tr class="pr-list-page-row">(.*?)</tr>', re.S)
+_SEC_A = re.compile(r'<a href="(/newsroom/press-releases/[0-9]{4}-[0-9]+[^"]*)"[^>]*>([^<]{10,400})</a>')
+_SEC_T = re.compile(r'<time datetime="([0-9T:\-]+Z)"')
+
+
+def _iso_ms(x: str) -> int | None:
+    try:
+        return int(datetime.fromisoformat(x.replace("Z", "+00:00")).timestamp() * 1000)
+    except ValueError:
+        return None
+
+
+def sec_html(raw: bytes) -> list[dict]:
+    """Страница пресс-релизов SEC (newsroom): строка таблицы — дата, ссылка, заголовок."""
+    h = raw.decode("utf-8", "replace")
+    out = []
+    for row in _SEC_ROW.findall(h):
+        a = _SEC_A.search(row)
+        if not a:
+            continue
+        t = _SEC_T.search(row)
+        url = "https://www.sec.gov" + a.group(1)
+        out.append({"key": url, "title": html.unescape(re.sub(r"\s+", " ", a.group(2))).strip(), "url": url,
+                    "ts_ms": _iso_ms(t.group(1)) if t else None})
+    return out
+
+
 PARSERS = {"bybit": bybit, "okx": okx, "bitget": bitget, "kucoin": kucoin, "binance_cms": binance_cms,
-           "rss": rss, "fincen": fincen, "ofac": ofac, "cftc": cftc}
+           "rss": rss, "fincen": fincen, "ofac": ofac, "cftc": cftc, "sec_html": sec_html}
 
 
 def parse(source: tuple, raw: bytes) -> list[Item]:
